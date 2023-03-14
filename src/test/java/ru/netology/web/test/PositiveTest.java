@@ -11,6 +11,11 @@ import static ru.netology.web.data.SQLHelper.cleanDatabase;
 
 public class PositiveTest {
 
+    @AfterAll
+    static void teardown() {
+        cleanDatabase();
+    }
+
     @Test
     void shouldLogin() {
         var loginPage = open("http://localhost:9999", LoginPage.class);
