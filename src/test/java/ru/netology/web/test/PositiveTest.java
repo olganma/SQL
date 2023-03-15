@@ -22,6 +22,6 @@ public class PositiveTest {
         var authInfo = DataHelper.getAuthInfo();
         var verificationPage = loginPage.validLogin(authInfo);
         var verificationCode = SQLHelper.getVerificationCode();
-        verificationPage.validVerify(SQLHelper.getVerificationCode());
+        verificationPage.validVerify(verificationCode);
     }
 }
